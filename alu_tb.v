@@ -1,0 +1,68 @@
+`include "a7_alu.v"
+module alu_tb();
+    reg [31:0]a,b;
+    reg [31:0]instruction;
+    wire [31:0] result;
+    alu u1(.a(a),.b(b),.instruction(instruction),.result(result));
+    initial begin
+        #20;
+        a=10;b=5;
+        instruction=32'b000000_10000_10001_00000_00000_100000;
+        #20;
+        $display("%d add",result);
+        #20;
+        instruction=32'b000000_10000_10001_00000_00000_100010;
+        #20;
+        $display("%d sub",result);
+         #20;
+        instruction=32'b000000_10000_10001_00000_00000_100001;
+        #20;
+        $display("%d addu",result);
+        #20;
+        instruction=32'b000000_10000_10001_00000_00000_100011;
+        #20;
+        $display("%d subu",result);
+         #20;
+         a=1;b=2;
+        instruction=32'b000000_10000_10001_00000_00000_100100;
+        #20;
+        $display("%b and",result);
+         #20;
+        instruction=32'b000000_10000_10001_00000_00000_100101;
+        #20;
+        $display("%b or",result);
+        #20;
+        instruction=32'b000000_10000_10001_00000_00000_101010;
+        #20;
+        $display("%d slt",result);
+         #20;
+        instruction=32'b000000_10000_10001_00000_00010_000000;
+        #20;
+        $display("%d sll",result);
+            #20;
+        instruction=32'b000000_10000_10001_00000_00010_000010;
+        #20;
+        $display("%d srl",result);
+            #20;
+        instruction=32'b001000_10000_10001_0000000000001010;
+        #20;
+        $display("%d addi",result);
+         #20;
+        instruction=32'b001001_10000_10001_0000000000001010;
+        #20;
+        $display("%d addiu",result);
+        #20;
+        instruction=32'b001100_10000_10001_0000000000001010;
+        #20;
+        $display("%b andi",result);
+         #20;
+        instruction=32'b001101_10000_10001_0000000000001010;
+        #20;
+        $display("%b ori",result);
+            #20;
+        instruction=32'b001010_10000_10001_0000000000001010;
+        #20;
+        $display("%d slti",result);
+    end
+endmodule
+

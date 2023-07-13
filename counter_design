@@ -1,0 +1,75 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "D:\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\va_math.vpi";
+S_000001b7268a2620 .scope module, "counter_design" "counter_design" 2 21;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /OUTPUT 4 "out";
+    .port_info 2 /INPUT 1 "reset";
+P_000001b72688ccc0 .param/l "W" 0 2 23, +C4<00000010111110101111000010000000>;
+o000001b7268d6fd8 .functor BUFZ 1, C4<z>; HiZ drive
+v000001b72688dfd0_0 .net "clk", 0 0, o000001b7268d6fd8;  0 drivers
+v000001b7268a2d40_0 .var "int_count", 31 0;
+v000001b7268a27b0_0 .var "out", 3 0;
+o000001b7268d7068 .functor BUFZ 1, C4<z>; HiZ drive
+v000001b7268a2850_0 .net "reset", 0 0, o000001b7268d7068;  0 drivers
+E_000001b72688cb00 .event posedge, v000001b72688dfd0_0;
+    .scope S_000001b7268a2620;
+T_0 ;
+    %wait E_000001b72688cb00;
+    %load/vec4 v000001b7268a2850_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v000001b7268a27b0_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v000001b7268a2d40_0;
+    %cmpi/e 50000000, 0, 32;
+    %jmp/0xz  T_0.2, 4;
+    %load/vec4 v000001b7268a27b0_0;
+    %addi 1, 0, 4;
+    %assign/vec4 v000001b7268a27b0_0, 0;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/vec4 v000001b7268a27b0_0;
+    %assign/vec4 v000001b7268a27b0_0, 0;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_000001b7268a2620;
+T_1 ;
+    %wait E_000001b72688cb00;
+    %load/vec4 v000001b7268a2850_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v000001b7268a2d40_0, 0;
+    %jmp T_1.1;
+T_1.0 ;
+    %load/vec4 v000001b7268a2d40_0;
+    %cmpi/e 50000000, 0, 32;
+    %jmp/0xz  T_1.2, 4;
+    %pushi/vec4 0, 0, 32;
+    %assign/vec4 v000001b7268a2d40_0, 0;
+    %jmp T_1.3;
+T_1.2 ;
+    %load/vec4 v000001b7268a2d40_0;
+    %addi 1, 0, 32;
+    %assign/vec4 v000001b7268a2d40_0, 0;
+T_1.3 ;
+T_1.1 ;
+    %jmp T_1;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "counter_design.v";

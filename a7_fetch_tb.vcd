@@ -1,0 +1,51 @@
+$date
+	Tue Apr 11 22:02:23 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module a7_fetch_tb $end
+$var wire 32 ! instruction [31:0] $end
+$var wire 32 " PC [31:0] $end
+$var reg 1 # clk $end
+$var reg 1 $ reset $end
+$scope module u1 $end
+$var wire 1 # clk $end
+$var wire 1 $ reset $end
+$var wire 32 % instruction [31:0] $end
+$var reg 32 & PC [31:0] $end
+$scope module u1 $end
+$var wire 32 ' address [31:0] $end
+$var wire 32 ( instruction [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx (
+bx '
+bx &
+bx %
+1$
+0#
+bx "
+bx !
+$end
+#10
+0$
+#15
+1#
+#30
+0#
+#45
+1#
+#60
+0#
+#70

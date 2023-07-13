@@ -1,0 +1,103 @@
+$date
+	Tue Jan 17 00:11:35 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module decoder_3to8_tb $end
+$var wire 1 ! y7 $end
+$var wire 1 " y6 $end
+$var wire 1 # y5 $end
+$var wire 1 $ y4 $end
+$var wire 1 % y3 $end
+$var wire 1 & y2 $end
+$var wire 1 ' y1 $end
+$var wire 1 ( y0 $end
+$var reg 1 ) a $end
+$var reg 1 * b $end
+$var reg 1 + c $end
+$scope module G5 $end
+$var wire 1 ) a $end
+$var wire 1 , a_comp $end
+$var wire 1 * b $end
+$var wire 1 - b_comp $end
+$var wire 1 + c $end
+$var wire 1 . c_comp $end
+$var wire 1 ( y0 $end
+$var wire 1 ' y1 $end
+$var wire 1 & y2 $end
+$var wire 1 % y3 $end
+$var wire 1 $ y4 $end
+$var wire 1 # y5 $end
+$var wire 1 " y6 $end
+$var wire 1 ! y7 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+1.
+1-
+1,
+0+
+0*
+0)
+1(
+0'
+0&
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+0(
+0.
+1'
+1+
+#20
+1&
+1.
+0'
+0-
+0+
+1*
+#30
+0&
+0.
+1%
+1+
+#40
+1$
+1.
+1-
+0%
+0,
+0+
+0*
+1)
+#50
+0$
+0.
+1#
+1+
+#60
+1"
+1.
+0#
+0-
+0+
+1*
+#70
+0"
+0.
+1!
+1+
+#80

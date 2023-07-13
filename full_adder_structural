@@ -1,0 +1,42 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "D:\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\va_math.vpi";
+S_000002479ec42620 .scope module, "full_adder_structural" "full_adder_structural" 2 5;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "cin";
+    .port_info 3 /OUTPUT 1 "s";
+    .port_info 4 /OUTPUT 1 "cout";
+o000002479ec76fb8 .functor BUFZ 1, C4<z>; HiZ drive
+o000002479ec76fe8 .functor BUFZ 1, C4<z>; HiZ drive
+L_000002479ec42e50 .functor XOR 1, o000002479ec76fb8, o000002479ec76fe8, C4<0>, C4<0>;
+L_000002479ec42fb0 .functor AND 1, o000002479ec76fb8, o000002479ec76fe8, C4<1>, C4<1>;
+o000002479ec77078 .functor BUFZ 1, C4<z>; HiZ drive
+L_000002479ec2e9f0 .functor XOR 1, L_000002479ec42e50, o000002479ec77078, C4<0>, C4<0>;
+L_000002479ec2ea60 .functor AND 1, L_000002479ec42e50, o000002479ec77078, C4<1>, C4<1>;
+L_000002479ec2ead0 .functor OR 1, L_000002479ec42fb0, L_000002479ec2ea60, C4<0>, C4<0>;
+v000002479ec427b0_0 .net "a", 0 0, o000002479ec76fb8;  0 drivers
+v000002479ec42850_0 .net "b", 0 0, o000002479ec76fe8;  0 drivers
+v000002479ec428f0_0 .net "c_temp", 0 0, L_000002479ec42fb0;  1 drivers
+v000002479ec2dec0_0 .net "c_temp_2", 0 0, L_000002479ec2ea60;  1 drivers
+v000002479ec2df60_0 .net "cin", 0 0, o000002479ec77078;  0 drivers
+v000002479ec2e000_0 .net "cout", 0 0, L_000002479ec2ead0;  1 drivers
+v000002479ec2e0a0_0 .net "s", 0 0, L_000002479ec2e9f0;  1 drivers
+v000002479ec2e140_0 .net "s_temp", 0 0, L_000002479ec42e50;  1 drivers
+    .scope S_000002479ec42620;
+T_0 ;
+    %vpi_call 2 22 "$display", "Hello, World" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "full_adder_structural.v";

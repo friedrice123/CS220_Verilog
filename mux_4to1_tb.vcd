@@ -1,0 +1,84 @@
+$date
+	Wed Jan 18 13:32:23 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module mux_4to1_tb $end
+$var wire 32 ! o [31:0] $end
+$var reg 32 " a [31:0] $end
+$var reg 32 # b [31:0] $end
+$var reg 32 $ c [31:0] $end
+$var reg 32 % d [31:0] $end
+$var reg 2 & s1 [1:0] $end
+$scope module G1 $end
+$var wire 32 ' a [31:0] $end
+$var wire 32 ( b [31:0] $end
+$var wire 32 ) c [31:0] $end
+$var wire 32 * d [31:0] $end
+$var wire 2 + s1 [1:0] $end
+$var reg 32 , o [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b10101 ,
+b0 +
+b1111 *
+b1010 )
+b1001 (
+b10101 '
+b0 &
+b1111 %
+b1010 $
+b1001 #
+b10101 "
+b10101 !
+$end
+#10
+b111111 !
+b111111 ,
+b11 &
+b11 +
+b111111 %
+b111111 *
+b1111 $
+b1111 )
+b10100 #
+b10100 (
+b11010 "
+b11010 '
+#20
+b1010 !
+b1010 ,
+b10 &
+b10 +
+b101 %
+b101 *
+b1010 $
+b1010 )
+b1000 #
+b1000 (
+b10 "
+b10 '
+#30
+b11 !
+b11 ,
+b1 &
+b1 +
+b100 %
+b100 *
+b1111 $
+b1111 )
+b11 #
+b11 (
+b111 "
+b111 '
+#40
